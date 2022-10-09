@@ -1,0 +1,26 @@
+doctype html
+html
+    head
+        include ../includes/dash-head.pug
+        script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin='anonymous' defer)
+        
+
+    body(style="background: #001220;font-family: 'Nunito', sans-serif;")
+        include ../includes/sidebar.pug
+
+        #sidebarExtension.bg-light(style='background-color: #002a3c87 !important;border-radius: 3%;')
+            header.text-center.pt-4
+                .large-icon.bg-white.round
+                    img.round(src=user.avatarUrl(128), alt=user.username)
+                h4.pt-2(style='color: white !important;') #{user.username} 
+                    span.text-muted #{'#' + user.discriminator.toString().padStart(4, '0')}
+
+        include ../includes/mainnav.pug
+        .jumbotron.text-center.bg-transparent
+            h1.display-3(style='color: white !important;') Dashboard
+            hr
+
+        script.
+            $('.hamburger').on('click', function () {
+                $('#sidebarExtension').toggleClass('closed')
+            })

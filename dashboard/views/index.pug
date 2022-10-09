@@ -1,0 +1,606 @@
+doctype html
+html(lang="en")
+    head
+        include includes/head.pug
+
+body(style="background: #001220;font-family: 'Nunito', sans-serif;")
+    #progressbar
+    #scrollPath
+    include includes/mainnav.pug
+    section(style='text-align: center;')
+        h1(style='color: white; position: relative;bottom: 10px;text-align: center;font-size: 34px;font-weight: revert;') SuperBot, The Best Choice For A Well Moderated Server
+        a.btn.btn-primary.btn-lg.active.butadd(href='/invite', role='button', aria-pressed='true' style='transition: all .2s ease-in-out;margin: 17px;')
+            i.fa-brands.fa-discord(style='font-size: 19px;color: white;')
+            span.pl-2(style='font-weight: 800;') Add To Discord
+        if user
+            a.btn.btn-secondary.btn-lg.active.butlog(href='/dashboard', role='button', aria-pressed='true' style='transition: all .2s ease-in-out;')
+                i.fa-sharp.fa-solid.fa-chart-line(style='font-size: 15px;color: white;')
+                span.pl-2 Dashboard
+        else
+            a.btn.btn-secondary.btn-lg.active.butlog(href='/login', role='button', aria-pressed='true' style='transition: all .2s ease-in-out;')
+                i.fa-solid.fa-right-to-bracket(style='font-size: 15px;color: white;')
+                span.pl-2 Login
+    .custom-shape-divider-bottom-1664655900
+        svg(data-name='Layer 1', xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1200 120', preserveaspectratio='none')
+            path.shape-fill(d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z', opacity='.25')
+            path.shape-fill(d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z', opacity='.5')
+            path.shape-fill(d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z')
+
+    section(style='text-align: center;background: #00ddff;')
+        .card-group
+            .card(style='border: none;background-color: #282828')
+                img.card-img-top(src='https://media.discordapp.net/attachments/1025426368898535507/1025880689247260733/unknown.png', alt='imga')
+                .card-body(style='color: white;')
+                    h5.card-title(style='font-weight: 800;')
+                        i.fa-solid.fa-slash-forward(style='font-size: 18px;')
+                        span.pl-2(style="font-weight: 800;font-family: 'Nunito', sans-serif;") Commands
+                    p.card-text(style="margin-left: 30px;margin-right: 30px;margin-bottom: 27px;")
+                        | SuperBot does support everying you need to well moderate your discord server including public, administration, giveaways, leveling, awards, and every command that can be so far!
+
+            .card(style='border: none;background-color: #282828')
+                img.card-img-top(src='https://media.discordapp.net/attachments/1023570374392299600/1025881144606076948/unknown.png', alt='imgb')
+                .card-body(style='color: white;')
+                    h5.card-title(style='font-weight: 800;')
+                        i.fa-solid.fa-bolt-lightning(style='font-size: 18px;')
+                        span.pl-2(style="font-weight: 800;font-family: 'Nunito', sans-serif;") Fast & Secure
+                    p.card-text(style="margin-left: 30px;margin-right: 30px;margin-bottom: 27px;")
+                        | SuperBot provides a secure service for all users to make sure everything is well secured for the user, and also fast responsivity, for commands, and its dashboard, we provide to our users the ability to change their custom commands for more capability to make it as you like.
+
+            .card(style='border: none;background-color: #282828')
+                img.card-img-top(src='https://media.discordapp.net/attachments/1023570374392299600/1025882121925054525/unknown.png', alt='imgc')
+                .card-body(style='color: white;')
+                    h5.card-title(style='font-weight: 800;') 
+                        i.fa-solid.fa-globe(style='font-size: 18px;')
+                        span.pl-2(style="font-weight: 800;font-family: 'Nunito', sans-serif;") 24/7
+                            
+                    p.card-text(style="margin-left: 30px;margin-right: 30px;margin-bottom: 27px;")
+                        | SuperBot is online for 24h a day, except maintenance that is most likely one time a month, and do not take more than 10 minutes, and we also have the support server that is for your service anytime you fave a difficulty of anything that has relation with our bot, english, french, arabic, german, chinese, and any language you speak is right there for your service, All of that just to satisfy our users. Enjoy!
+
+    .custom-shape-divider-top-1664657400
+        svg(data-name='Layer 1', xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1200 120', preserveaspectratio='none')
+            path.shape-fill(d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z', opacity='.25')
+            path.shape-fill(d='M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z', opacity='.5')
+            path.shape-fill(d='M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z')
+
+
+    section(style='text-align: center;')
+        .card.border-success.mb-3(style='border-color: #00ddff!important;max-width: 174rem;background-color: #fff0;')
+            .card-header(style='color: #00ddff') Servers
+            .card-body.text-success
+                h5.card-title +#{serversStat}
+        .card.border-success.mb-3(style='border-color: #00ddff!important;max-width: 174rem;background-color: #fff0;')
+            .card-header(style='color: #00ddff') Users
+            .card-body.text-success
+                h5.card-title +#{usersStat}
+        .card.border-success.mb-3(style='border-color: #00ddff!important;max-width: 174rem;background-color: #fff0;')
+            .card-header(style='color: #00ddff') Commands
+            .card-body.text-success
+                h5.card-title +25
+
+footer
+  a
+    p(style='text-decoration: underline; text-align: center;color: #787878;') Official Developer: katakuri.js | &copy; 2022  All Rights Reserved
+
+    script.
+        var VanillaTilt = (function () {
+        'use strict';
+        
+        /**
+        * Created by Sergiu Șandor (micku7zu) on 1/27/2017.
+        * Original idea: https://github.com/gijsroge/tilt.js
+        * MIT License.
+        * Version 1.7.2
+        */
+        
+        class VanillaTilt {
+        constructor(element, settings = {}) {
+            if (!(element instanceof Node)) {
+            throw ("Can't initialize VanillaTilt because " + element + " is not a Node.");
+            }
+        
+            this.width = null;
+            this.height = null;
+            this.clientWidth = null;
+            this.clientHeight = null;
+            this.left = null;
+            this.top = null;
+        
+            // for Gyroscope sampling
+            this.gammazero = null;
+            this.betazero = null;
+            this.lastgammazero = null;
+            this.lastbetazero = null;
+        
+            this.transitionTimeout = null;
+            this.updateCall = null;
+            this.event = null;
+        
+            this.updateBind = this.update.bind(this);
+            this.resetBind = this.reset.bind(this);
+        
+            this.element = element;
+            this.settings = this.extendSettings(settings);
+        
+            this.reverse = this.settings.reverse ? -1 : 1;
+            this.glare = VanillaTilt.isSettingTrue(this.settings.glare);
+            this.glarePrerender = VanillaTilt.isSettingTrue(this.settings["glare-prerender"]);
+            this.fullPageListening = VanillaTilt.isSettingTrue(this.settings["full-page-listening"]);
+            this.gyroscope = VanillaTilt.isSettingTrue(this.settings.gyroscope);
+            this.gyroscopeSamples = this.settings.gyroscopeSamples;
+        
+            this.elementListener = this.getElementListener();
+        
+            if (this.glare) {
+            this.prepareGlare();
+            }
+        
+            if (this.fullPageListening) {
+            this.updateClientSize();
+            }
+        
+            this.addEventListeners();
+            this.reset();
+            this.updateInitialPosition();
+        }
+        
+        static isSettingTrue(setting) {
+            return setting === "" || setting === true || setting === 1;
+        }
+        
+        /**
+        * Method returns element what will be listen mouse events
+        * @return {Node}
+        */
+        getElementListener() {
+            if (this.fullPageListening) {
+            return window.document;
+            }
+        
+            if (typeof this.settings["mouse-event-element"] === "string") {
+            const mouseEventElement = document.querySelector(this.settings["mouse-event-element"]);
+        
+            if (mouseEventElement) {
+                return mouseEventElement;
+            }
+            }
+        
+            if (this.settings["mouse-event-element"] instanceof Node) {
+            return this.settings["mouse-event-element"];
+            }
+        
+            return this.element;
+        }
+        
+        /**
+        * Method set listen methods for this.elementListener
+        * @return {Node}
+        */
+        addEventListeners() {
+            this.onMouseEnterBind = this.onMouseEnter.bind(this);
+            this.onMouseMoveBind = this.onMouseMove.bind(this);
+            this.onMouseLeaveBind = this.onMouseLeave.bind(this);
+            this.onWindowResizeBind = this.onWindowResize.bind(this);
+            this.onDeviceOrientationBind = this.onDeviceOrientation.bind(this);
+        
+            this.elementListener.addEventListener("mouseenter", this.onMouseEnterBind);
+            this.elementListener.addEventListener("mouseleave", this.onMouseLeaveBind);
+            this.elementListener.addEventListener("mousemove", this.onMouseMoveBind);
+        
+            if (this.glare || this.fullPageListening) {
+            window.addEventListener("resize", this.onWindowResizeBind);
+            }
+        
+            if (this.gyroscope) {
+            window.addEventListener("deviceorientation", this.onDeviceOrientationBind);
+            }
+        }
+        
+        /**
+        * Method remove event listeners from current this.elementListener
+        */
+        removeEventListeners() {
+            this.elementListener.removeEventListener("mouseenter", this.onMouseEnterBind);
+            this.elementListener.removeEventListener("mouseleave", this.onMouseLeaveBind);
+            this.elementListener.removeEventListener("mousemove", this.onMouseMoveBind);
+        
+            if (this.gyroscope) {
+            window.removeEventListener("deviceorientation", this.onDeviceOrientationBind);
+            }
+        
+            if (this.glare || this.fullPageListening) {
+            window.removeEventListener("resize", this.onWindowResizeBind);
+            }
+        }
+        
+        destroy() {
+            clearTimeout(this.transitionTimeout);
+            if (this.updateCall !== null) {
+            cancelAnimationFrame(this.updateCall);
+            }
+        
+            this.reset();
+        
+            this.removeEventListeners();
+            this.element.vanillaTilt = null;
+            delete this.element.vanillaTilt;
+        
+            this.element = null;
+        }
+        
+        onDeviceOrientation(event) {
+            if (event.gamma === null || event.beta === null) {
+            return;
+            }
+        
+            this.updateElementPosition();
+        
+            if (this.gyroscopeSamples > 0) {
+            this.lastgammazero = this.gammazero;
+            this.lastbetazero = this.betazero;
+        
+            if (this.gammazero === null) {
+                this.gammazero = event.gamma;
+                this.betazero = event.beta;
+            } else {
+                this.gammazero = (event.gamma + this.lastgammazero) / 2;
+                this.betazero = (event.beta + this.lastbetazero) / 2;
+            }
+        
+            this.gyroscopeSamples -= 1;
+            }
+        
+            const totalAngleX = this.settings.gyroscopeMaxAngleX - this.settings.gyroscopeMinAngleX;
+            const totalAngleY = this.settings.gyroscopeMaxAngleY - this.settings.gyroscopeMinAngleY;
+        
+            const degreesPerPixelX = totalAngleX / this.width;
+            const degreesPerPixelY = totalAngleY / this.height;
+        
+            const angleX = event.gamma - (this.settings.gyroscopeMinAngleX + this.gammazero);
+            const angleY = event.beta - (this.settings.gyroscopeMinAngleY + this.betazero);
+        
+            const posX = angleX / degreesPerPixelX;
+            const posY = angleY / degreesPerPixelY;
+        
+            if (this.updateCall !== null) {
+            cancelAnimationFrame(this.updateCall);
+            }
+        
+            this.event = {
+            clientX: posX + this.left,
+            clientY: posY + this.top,
+            };
+        
+            this.updateCall = requestAnimationFrame(this.updateBind);
+        }
+        
+        onMouseEnter() {
+            this.updateElementPosition();
+            this.element.style.willChange = "transform";
+            this.setTransition();
+        }
+        
+        onMouseMove(event) {
+            if (this.updateCall !== null) {
+            cancelAnimationFrame(this.updateCall);
+            }
+        
+            this.event = event;
+            this.updateCall = requestAnimationFrame(this.updateBind);
+        }
+        
+        onMouseLeave() {
+            this.setTransition();
+        
+            if (this.settings.reset) {
+            requestAnimationFrame(this.resetBind);
+            }
+        }
+        
+        reset() {
+            this.event = {
+            clientX: this.left + this.width / 2,
+            clientY: this.top + this.height / 2
+            };
+        
+            if (this.element && this.element.style) {
+            this.element.style.transform = `perspective(${this.settings.perspective}px) ` +
+                `rotateX(0deg) ` +
+                `rotateY(0deg) ` +
+                `scale3d(1, 1, 1)`;
+            }
+        
+            this.resetGlare();
+        }
+        
+        resetGlare() {
+            if (this.glare) {
+            this.glareElement.style.transform = "rotate(180deg) translate(-50%, -50%)";
+            this.glareElement.style.opacity = "0";
+            }
+        }
+        
+        updateInitialPosition() {
+            if (this.settings.startX === 0 && this.settings.startY === 0) {
+            return;
+            }
+        
+            this.onMouseEnter();
+        
+            if (this.fullPageListening) {
+            this.event = {
+                clientX: (this.settings.startX + this.settings.max) / (2 * this.settings.max) * this.clientWidth,
+                clientY: (this.settings.startY + this.settings.max) / (2 * this.settings.max) * this.clientHeight
+            };
+            } else {
+            this.event = {
+                clientX: this.left + ((this.settings.startX + this.settings.max) / (2 * this.settings.max) * this.width),
+                clientY: this.top + ((this.settings.startY + this.settings.max) / (2 * this.settings.max) * this.height)
+            };
+            }
+        
+        
+            let backupScale = this.settings.scale;
+            this.settings.scale = 1;
+            this.update();
+            this.settings.scale = backupScale;
+            this.resetGlare();
+        }
+        
+        getValues() {
+            let x, y;
+        
+            if (this.fullPageListening) {
+            x = this.event.clientX / this.clientWidth;
+            y = this.event.clientY / this.clientHeight;
+            } else {
+            x = (this.event.clientX - this.left) / this.width;
+            y = (this.event.clientY - this.top) / this.height;
+            }
+        
+            x = Math.min(Math.max(x, 0), 1);
+            y = Math.min(Math.max(y, 0), 1);
+        
+            let tiltX = (this.reverse * (this.settings.max - x * this.settings.max * 2)).toFixed(2);
+            let tiltY = (this.reverse * (y * this.settings.max * 2 - this.settings.max)).toFixed(2);
+            let angle = Math.atan2(this.event.clientX - (this.left + this.width / 2), -(this.event.clientY - (this.top + this.height / 2))) * (180 / Math.PI);
+        
+            return {
+            tiltX: tiltX,
+            tiltY: tiltY,
+            percentageX: x * 100,
+            percentageY: y * 100,
+            angle: angle
+            };
+        }
+        
+        updateElementPosition() {
+            let rect = this.element.getBoundingClientRect();
+        
+            this.width = this.element.offsetWidth;
+            this.height = this.element.offsetHeight;
+            this.left = rect.left;
+            this.top = rect.top;
+        }
+        
+        update() {
+            let values = this.getValues();
+        
+            this.element.style.transform = "perspective(" + this.settings.perspective + "px) " +
+            "rotateX(" + (this.settings.axis === "x" ? 0 : values.tiltY) + "deg) " +
+            "rotateY(" + (this.settings.axis === "y" ? 0 : values.tiltX) + "deg) " +
+            "scale3d(" + this.settings.scale + ", " + this.settings.scale + ", " + this.settings.scale + ")";
+        
+            if (this.glare) {
+            this.glareElement.style.transform = `rotate(${values.angle}deg) translate(-50%, -50%)`;
+            this.glareElement.style.opacity = `${values.percentageY * this.settings["max-glare"] / 100}`;
+            }
+        
+            this.element.dispatchEvent(new CustomEvent("tiltChange", {
+            "detail": values
+            }));
+        
+            this.updateCall = null;
+        }
+        
+        /**
+        * Appends the glare element (if glarePrerender equals false)
+        * and sets the default style
+        */
+        prepareGlare() {
+            // If option pre-render is enabled we assume all html/css is present for an optimal glare effect.
+            if (!this.glarePrerender) {
+            // Create glare element
+            const jsTiltGlare = document.createElement("div");
+            jsTiltGlare.classList.add("js-tilt-glare");
+        
+            const jsTiltGlareInner = document.createElement("div");
+            jsTiltGlareInner.classList.add("js-tilt-glare-inner");
+        
+            jsTiltGlare.appendChild(jsTiltGlareInner);
+            this.element.appendChild(jsTiltGlare);
+            }
+        
+            this.glareElementWrapper = this.element.querySelector(".js-tilt-glare");
+            this.glareElement = this.element.querySelector(".js-tilt-glare-inner");
+        
+            if (this.glarePrerender) {
+            return;
+            }
+        
+            Object.assign(this.glareElementWrapper.style, {
+            "position": "absolute",
+            "top": "0",
+            "left": "0",
+            "width": "100%",
+            "height": "100%",
+            "overflow": "hidden",
+            "pointer-events": "none"
+            });
+        
+            Object.assign(this.glareElement.style, {
+            "position": "absolute",
+            "top": "50%",
+            "left": "50%",
+            "pointer-events": "none",
+            "background-image": `linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%)`,
+            "transform": "rotate(180deg) translate(-50%, -50%)",
+            "transform-origin": "0% 0%",
+            "opacity": "0",
+            });
+        
+            this.updateGlareSize();
+        }
+        
+        updateGlareSize() {
+            if (this.glare) {
+            const glareSize = (this.element.offsetWidth > this.element.offsetHeight ? this.element.offsetWidth : this.element.offsetHeight) * 2;
+        
+            Object.assign(this.glareElement.style, {
+                "width": `${glareSize}px`,
+                "height": `${glareSize}px`,
+            });
+            }
+        }
+        
+        updateClientSize() {
+            this.clientWidth = window.innerWidth
+            || document.documentElement.clientWidth
+            || document.body.clientWidth;
+        
+            this.clientHeight = window.innerHeight
+            || document.documentElement.clientHeight
+            || document.body.clientHeight;
+        }
+        
+        onWindowResize() {
+            this.updateGlareSize();
+            this.updateClientSize();
+        }
+        
+        setTransition() {
+            clearTimeout(this.transitionTimeout);
+            this.element.style.transition = this.settings.speed + "ms " + this.settings.easing;
+            if (this.glare) this.glareElement.style.transition = `opacity ${this.settings.speed}ms ${this.settings.easing}`;
+        
+            this.transitionTimeout = setTimeout(() => {
+            this.element.style.transition = "";
+            if (this.glare) {
+                this.glareElement.style.transition = "";
+            }
+            }, this.settings.speed);
+        
+        }
+        
+        /**
+        * Method return patched settings of instance
+        * @param {boolean} settings.reverse - reverse the tilt direction
+        * @param {number} settings.max - max tilt rotation (degrees)
+        * @param {startX} settings.startX - the starting tilt on the X axis, in degrees. Default: 0
+        * @param {startY} settings.startY - the starting tilt on the Y axis, in degrees. Default: 0
+        * @param {number} settings.perspective - Transform perspective, the lower the more extreme the tilt gets
+        * @param {string} settings.easing - Easing on enter/exit
+        * @param {number} settings.scale - 2 = 200%, 1.5 = 150%, etc..
+        * @param {number} settings.speed - Speed of the enter/exit transition
+        * @param {boolean} settings.transition - Set a transition on enter/exit
+        * @param {string|null} settings.axis - What axis should be disabled. Can be X or Y
+        * @param {boolean} settings.glare - What axis should be disabled. Can be X or Y
+        * @param {number} settings.max-glare - the maximum "glare" opacity (1 = 100%, 0.5 = 50%)
+        * @param {boolean} settings.glare-prerender - false = VanillaTilt creates the glare elements for you, otherwise
+        * @param {boolean} settings.full-page-listening - If true, parallax effect will listen to mouse move events on the whole document, not only the selected element
+        * @param {string|object} settings.mouse-event-element - String selector or link to HTML-element what will be listen mouse events
+        * @param {boolean} settings.reset - false = If the tilt effect has to be reset on exit
+        * @param {gyroscope} settings.gyroscope - Enable tilting by deviceorientation events
+        * @param {gyroscopeSensitivity} settings.gyroscopeSensitivity - Between 0 and 1 - The angle at which max tilt position is reached. 1 = 90deg, 0.5 = 45deg, etc..
+        * @param {gyroscopeSamples} settings.gyroscopeSamples - How many gyroscope moves to decide the starting position.
+        */
+        extendSettings(settings) {
+            let defaultSettings = {
+            reverse: false,
+            max: 15,
+            startX: 0,
+            startY: 0,
+            perspective: 1000,
+            easing: "cubic-bezier(.03,.98,.52,.99)",
+            scale: 1,
+            speed: 300,
+            transition: true,
+            axis: null,
+            glare: false,
+            "max-glare": 1,
+            "glare-prerender": false,
+            "full-page-listening": false,
+            "mouse-event-element": null,
+            reset: true,
+            gyroscope: true,
+            gyroscopeMinAngleX: -45,
+            gyroscopeMaxAngleX: 45,
+            gyroscopeMinAngleY: -45,
+            gyroscopeMaxAngleY: 45,
+            gyroscopeSamples: 10
+            };
+        
+            let newSettings = {};
+            for (var property in defaultSettings) {
+            if (property in settings) {
+                newSettings[property] = settings[property];
+            } else if (this.element.hasAttribute("data-tilt-" + property)) {
+                let attribute = this.element.getAttribute("data-tilt-" + property);
+                try {
+                newSettings[property] = JSON.parse(attribute);
+                } catch (e) {
+                newSettings[property] = attribute;
+                }
+        
+            } else {
+                newSettings[property] = defaultSettings[property];
+            }
+            }
+        
+            return newSettings;
+        }
+        
+        static init(elements, settings) {
+            if (elements instanceof Node) {
+            elements = [elements];
+            }
+        
+            if (elements instanceof NodeList) {
+            elements = [].slice.call(elements);
+            }
+        
+            if (!(elements instanceof Array)) {
+            return;
+            }
+        
+            elements.forEach((element) => {
+            if (!("vanillaTilt" in element)) {
+                element.vanillaTilt = new VanillaTilt(element, settings);
+            }
+            });
+        }
+        }
+        
+        if (typeof document !== "undefined") {
+        /* expose the class to window */
+        window.VanillaTilt = VanillaTilt;
+        
+        /**
+        * Auto load
+        */
+        VanillaTilt.init(document.querySelectorAll("[data-tilt]"));
+        }
+        
+        return VanillaTilt;
+        
+        }());
+    script(type='text/javascript').
+        VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400
+        });
+
+
+
+
+
+

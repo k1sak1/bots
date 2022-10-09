@@ -1,0 +1,202 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width, initial-scale=1.0")
+title SuperBot
+link(rel='icon', href='https://i.imgur.com/turytP2.png')
+style.
+    html::-webkit-scrollbar {
+        width: 0.8vw;
+    }
+    html::-webkit-scrollbar-thumb {
+        background-color: #7775;
+    }
+    html::-webkit-scrollbar-thumb:hover {
+        background-color: #777;
+    }
+    html::-webkit-scrollbar-track {
+        background-color: #5555;
+    }
+    html::-webkit-scrollbar-track:hover {
+        background-color: #555;
+    }
+    section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 20vw;
+    }
+    html {
+        max-width: 100%;
+        overflow-x: hidden;
+        font-family: 'Nunito', sans-serif;
+        scrollbar-width: normal;
+        scrollbar-color: #777 #555;
+    }
+    body {
+        max-width: 100%;
+        overflow-x: hidden;
+        background-color: #001220;
+        font-family: 'Nunito', sans-serif !important;
+    }
+    .butadd:hover {
+        background: #004581;
+        box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 30%);
+        transform: translateY(-7px) scale(1.1);
+        background: #0d4074;
+    }
+    .butlog:hover {
+        background: #4c4c4c;
+        box-shadow: 0px 0px 20px 0px rgb(0 0 0 / 30%);
+        transform: translateY(-7px) scale(1.1);
+        background: #393d42;
+    }
+    .custom-shape-divider-bottom-1664655900 {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+
+    .custom-shape-divider-bottom-1664655900 svg {
+        position: relative;
+        display: block;
+        width: calc(153% + 1.3px);
+        height: 78px;
+    }
+
+    .custom-shape-divider-bottom-1664655900 .shape-fill {
+        fill: #00DDFF;
+    }
+    .custom-shape-divider-top-1664657400 {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+    }
+
+    .custom-shape-divider-top-1664657400 svg {
+        position: relative;
+        display: block;
+        width: calc(173% + 1.3px);
+        height: 98px;
+    }
+
+    .custom-shape-divider-top-1664657400 .shape-fill {
+        fill: #00DDFF;
+    }
+    
+    .icon, .icon img {
+        font-size: x-large;
+
+        height: 52px;
+        width: 52px;
+
+        transition: border-radius .2s ease-in-out;
+    }
+    .hamburger {
+        cursor: pointer;
+        font-size: xxx-large;
+
+        bottom: 0;
+        position: absolute;
+    }
+    #sidebar {
+        padding: 10px;
+    }
+    #sidebar,
+    #sidebarExtension {
+        height: 100vh;
+        float: left;
+    }
+    #sidebarExtension {
+        width: 275px;
+        transition: .2s;
+        opacity: 1;
+    }
+    #sidebarExtension .large-icon {
+        display: block;
+
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+    #sidebarExtension .large-icon,
+    #sidebarExtension img {
+        font-size: xx-large;
+        width: 96px;
+        height: 96px
+    }
+    #sidebarExtension .abbr {
+        padding-top: 25px;
+    }
+    #sidebarExtension.closed {
+        width: 0;
+        padding: 0px 0;
+    }
+    #sidebarExtension.closed {
+        opacity: 0;
+    }
+    .abbr {
+        padding-top: 7.5px;
+    }
+    .round {
+        border-radius: 50% !important;
+    }
+    .shadow {
+        box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    }
+    .icon:hover, .icon img:hover {
+        border-radius: 29% !important;
+    }
+    #tooltip {
+        color: white;
+        text-decoration: none !important;
+    }
+    .tabs a {
+        margin: 2px 10px;
+        padding: 5px;
+        padding-left: 10px !important;
+        border-radius: 5px;
+
+        text-decoration: none;
+        color: white;
+    }
+    .tabs a:hover {
+        background-color: #002d46;
+        text-decoration: none;
+        color: white;
+    }
+    .tabs .category {
+        padding: 24px 0 4px 24px;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        color: gray;
+        cursor: pointer;
+
+        transition: color .3s ease-in-out;
+    }
+    .tabs .category:hover {
+        color: white;
+    }
+
+
+link(rel='preconnect', href='https://fonts.googleapis.com')
+link(rel='preconnect', href='https://fonts.gstatic.com', crossorigin='')
+link(href='https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap', rel='stylesheet')
+link(href='https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap', rel='stylesheet')
+link(href='https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap', rel='stylesheet')
+link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap', rel='stylesheet')
+link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css')
+link(href='https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap', rel='stylesheet')
+script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', integrity='sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN', crossorigin='anonymous' defer)
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js', integrity='sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s', crossorigin='anonymous' defer)
+link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css', integrity='sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2', crossorigin='anonymous')
+script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin='anonymous' defer)

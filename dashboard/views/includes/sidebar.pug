@@ -1,0 +1,26 @@
+#sidebar.float-left(style="background: #171622 !important;")
+    a(href='/dashboard')
+        .icon.round.shadow
+            img.round(alt=user.username, src=user.avatarUrl(64))
+    hr(style='background: #4c4c4c;')
+    each guild in guilds
+        a(href='/servers/' + guild.id)
+            .icon.round.shadow.my-2(data-toggle='tooltip', data-placement='right', title=guild.name)
+                if guild.icon
+                    .tooltipa
+
+                        img#tooltip.round(alt=guild.name, src=guild.iconURL({ dynamic: true, size: 64 }))
+                    
+                else
+                    .tooltipa
+                        img.round.abrri(alt=guild.name, id=guild.name)
+                        script.
+                            document.getElementById("#{guild.name}").setAttribute('src', "https://ui-avatars.com/api/?uppercase=false&background=494d54&color=fff&bold=true&format=svg&name="+encodeURIComponent("#{guild.name}"))
+
+    a(href='/invite')
+        .icon.round.pt-2
+            p.abbr.text-success.text-center
+                i.fas.fa-plus
+    .hamburger.pl-1
+        i.fa-solid.fa-bars(style='color: white;')
+

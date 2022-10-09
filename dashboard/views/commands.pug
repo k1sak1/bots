@@ -1,0 +1,146 @@
+include includes/mixins
+
+doctype html
+html(lang="en")
+    head
+        include includes/head.pug
+        style.
+            #search {
+                max-width: 300px;
+            }
+            #search + button {
+                height: 36px;
+                position: relative;
+                top: 15px;
+            }
+            li {
+                cursor: pointer;
+            }
+        script(src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js", defer)
+        script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin='anonymous')
+        
+        script(defer).
+            let commands = !{commandsString};
+    
+
+    body(style="background: #001220;font-family: 'Nunito', sans-serif;")
+        include includes/mainnav.pug
+        .container
+            .jumbotron.text-center.bg-transparent
+                h1.display-3(style='color: white;') Commands
+                p.lead(style='color: white;') Yep... Those are all the commands that you can use in your server, Enjoy!
+                hr(style='background: white;')
+
+        section#commands(style='padding: 12px 12vw;')
+            .d-flex.justify-content-center
+                #search.form-group.p-3
+                    input.form-control(type="search")
+                button.btn
+                    i.fas.fa-search(style='color: white;')
+            .row
+                .col-sm-3.categories
+                    ul.list-group.mb-2
+                        li.list-group-item.Administration
+                            i.fa-solid.fa-lock
+                            span.ml-2 Administration
+                        li.list-group-item.Moderation
+                            i.fa-solid.fa-wrench
+                            span.ml-2 Moderation
+                        li.list-group-item.General
+                            i.fa-solid.fa-house
+                            span.ml-2 General
+                        li.list-group-item.Music
+                            i.fa-solid.fa-music
+                            span.ml-2 Music
+                        li.list-group-item.Giveaways
+                            i.fa-solid.fa-star
+                            span.ml-2 Giveaways
+                        li.list-group-item.Fun
+                            i.fa-solid.fa-gamepad
+                            span.ml-2 Fun
+                        li.list-group-item.Coins
+                            i.fa-solid.fa-money-bill
+                            span.ml-2 Coins
+
+                .col-sm-9
+                    p.error(style='color: white;') There is nothing to see here
+                    ul.list-group.nigger
+                        each command in commands
+                            +command(command)
+        script.
+                $('.error').hide();
+                $('.Administration').addClass('active')
+                $('.nigger li').hide();
+                $('.nigger #Administration').show();
+                $('.Administration').on('click', () => {
+                    $('.list-group-item').removeClass('active')
+                    $('.Administration').addClass('active')
+                    $('.nigger li').hide();
+                    $('.nigger #Administration').show();
+                })
+                $('.Moderation').on('click', () => {
+                    $('.list-group-item').removeClass('active')
+                    $('.Moderation').addClass('active')
+                    $('.nigger li').hide();
+                    $('.nigger #Moderation').show();
+                })
+                $('.General').on('click', () => {
+                    $('.list-group-item').removeClass('active')
+                    $('.General').addClass('active')
+                    $('.nigger li').hide();
+                    $('.nigger #General').show();
+                })
+                $('.Music').on('click', () => {
+                    $('.list-group-item').removeClass('active')
+                    $('.Music').addClass('active')
+                    $('.nigger li').hide();
+                    $('.nigger #Music').show();
+                })
+                $('.Giveaways').on('click', () => {
+                    $('.list-group-item').removeClass('active')
+                    $('.Giveaways').addClass('active')
+                    $('.nigger li').hide();
+                    $('.nigger #Giveaways').show();
+                })
+                $('.Fun').on('click', () => {
+                    $('.list-group-item').removeClass('active')
+                    $('.Fun').addClass('active')
+                    $('.nigger li').hide();
+                    $('.nigger #Fun').show();
+                })
+                $('.Coins').on('click', () => {
+                    $('.list-group-item').removeClass('active')
+                    $('.Coins').addClass('active')
+                    $('.nigger li').hide();
+                    $('.nigger #Coins').show();
+                })
+                $('#search + button').on('click', () => {
+                    const query = $('#search input').val();
+                    const results = new Fuse(commands, {
+                            isCaseSensitive: false,
+                            keys: [
+                                { name: 'name', weight: 1 },
+                                { name: 'category', weight: 0.5 }
+                            ]
+                        })
+                        .search(query)
+                        .map(r => r.item)
+                    
+                    $('.list-group-item').removeClass('active');
+                    $('.nigger li').hide();
+
+                    for (const command of results) {
+                        $(`.${command.name}`).show();
+                        $('.error').hide();
+                    }
+                    
+                    updateResultsText(results);                    
+                });
+
+                function updateResultsText(arr) {
+                    if(arr.length <= 0) {
+                        $('.nigger li').hide();
+                        $('.error').show();
+                    }
+                }
+            

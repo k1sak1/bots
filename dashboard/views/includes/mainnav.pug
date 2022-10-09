@@ -1,0 +1,26 @@
+script(src='https://code.jquery.com/jquery-3.5.1.slim.min.js', integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj', crossorigin='anonymous')
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky(style='background-color: #171622!important;')
+  a.navbar-brand(href='/' style='color: rgb(0 208 255);')
+    img(src='https://i.imgur.com/turytP2.png', width='30', height='30', alt='', loading='lazy')
+    |      SuperBot
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation' style='background-color: white;')
+    span.navbar-toggler-icon
+  #navbarNavAltMarkup.collapse.navbar-collapse
+    .navbar-nav
+      a.nav-link(href='/commands' style='color: rgb(237 253 255);')
+        i.fa-solid.fa-code(style='font-size: 15px;color: white;')
+        span.pl-2(style='font-weight: 800;') Commands
+    .navbar-nav.ml-auto
+      if user
+        .dropdown.mr-2
+          .dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            img.user-avatar(src=user.avatarUrl(32), style='border-radius: 50%;')
+            span.pl-2(style='color: white;') #{user.username}
+          .dropdown-menu(aria-labelledby='dropdownMenuButton')
+            a.dropdown-item(href='/dashboard') Dashboard
+            hr
+            a.dropdown-item(href='/logout') Logout
+      else
+        a.nav-link(href='/login' style='color: rgb(237 253 255);')
+          i.fa-solid.fa-right-to-bracket(style='font-size: 15px;color: white;')
+          span.pl-2 Login
