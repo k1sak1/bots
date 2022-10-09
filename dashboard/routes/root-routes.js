@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
     })
 });
 router.get('/invite', (req, res) => {
-    res.redirect('https://discord.com/api/oauth2/authorize?client_id=1019225212736249896&redirect_uri=http://localhost:3000/auth-guild&response_type=code&permissions=8&scope=bot%20applications.commands')
+    res.redirect('https://discord.com/api/oauth2/authorize?client_id=1019225212736249896&redirect_uri=https://dashnigger.herokuapp.com/auth-guild&response_type=code&permissions=8&scope=bot%20applications.commands')
 });
 router.get('/support', (req, res) => {
     res.redirect('https://discord.gg/ruc5GTnG6F')

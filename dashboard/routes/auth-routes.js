@@ -4,7 +4,7 @@ const router = express.Router();
 const sessions = require("../modules/sessions")
 
 router.get('/login', (req, res, next) => 
-    res.redirect('https://discord.com/api/oauth2/authorize?client_id=1019225212736249896&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth&response_type=code&scope=identify%20guilds'))
+    res.redirect('https://discord.com/api/oauth2/authorize?client_id=1019225212736249896&redirect_uri=https://dashnigger.herokuapp.com/auth&response_type=code&scope=identify%20guilds'))
 
 router.get('/auth-guild', async (req, res) => {
     try {
